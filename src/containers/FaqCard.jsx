@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../styles/faqcard.scss';
 
@@ -17,6 +17,15 @@ import illustrationBoxShadowDesktop from '../images/bg-pattern-desktop.svg';
 
 function FaqCard() 
 {
+  const [items, setItems] = useState(faqItems);
+
+  const toggleClickedHandler = (ev, id) => {
+    const updatedItems = [...items];
+    const itemIndex = updatedItems.findIndex(val => val.id === id);
+    updatedItems[itemIndex].active = !items[itemIndex].active;
+    setItems(updatedItems);
+  }
+
   return (
     <div className="FaqCard">
       <div className="BoxImage">
@@ -39,8 +48,11 @@ function FaqCard()
           <h1>FAQ</h1>
         </hgroup>
         <FaqItemsContainer>
-          {faqItems.map(i => (
-            <FaqItem key={i.id} title={i.title} desc={i.desc} active={i.active} />
+          {items.map(i => (
+            <FaqItem key={i.id} 
+              title={i.title} 
+              desc={i.desc} 
+              active={i.active} clicked={ev => toggleClickedHandler(ev, i.id)} />
           ))}
         </FaqItemsContainer>
       </div>

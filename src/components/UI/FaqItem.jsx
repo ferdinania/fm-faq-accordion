@@ -5,7 +5,7 @@ import '../../styles/faqitems.scss';
 import arrowIcon from '../../images/icon-arrow-down.svg';
 
 
-function FaqItem({ title, desc, active })
+function FaqItem({ title, desc, active, clicked })
 {
   let classActive = ''
   if (active) {
@@ -13,13 +13,13 @@ function FaqItem({ title, desc, active })
   }
 
   return (
-    <li className="FaqItem">
+    <li className="FaqItem" onClick={clicked}>
       <div className="Item-Content">
         <p className={classActive}>{ title }</p>
-        <p>{ desc }</p>
+        {active && <p>{ desc }</p>}
       </div>
       <div className="Item-Arrow">
-        <img src={arrowIcon} alt="" />
+        <img className={active ? 'rotateUp' : ''} src={arrowIcon} alt="" />
       </div>
     </li>
   )
