@@ -1,9 +1,12 @@
 import React from 'react';
 
+import FaqCard from '../containers/FaqCard';
+
+
 function App() 
 {
     return (
-        <h1>React App</h1>
+        <FaqCard />
     )
 }
 
