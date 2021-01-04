@@ -1,14 +1,35 @@
-$primary-color: hsl(238, 29%, 16%);
-$primary-accent: hsl(14, 88%, 65%);
+@import 'shared';
 
-$secondary-color: hsl(273, 75%, 66%);
-$secondary-accent-color: hsl(240, 73%, 65%);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-$primary-text-color: hsl(237, 12%, 33%);
-$secondary-text-color: hsl(240, 6%, 50%);
+body, html {
+  font-family: $font-family;
+  font-size: $font-size-default;
+}
 
-$divider-color: hsl(240, 5%, 91%);
+body {
+  height: 100vh;
+  padding: 0 1.4rem;
 
-$font-size-default: 12px;
+  display: flex;
+  align-items: center;
 
-$font-family: 'Kumbh Sans', sans-serif;
+  background: rgb(101,101,231);
+  background: linear-gradient(0deg, rgba(101,101,231,1) 0%, rgba(175,103,233,1) 100%);
+
+  color: $primary-color;
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+  font-size: 2.7em;
+  
+}
+
+.text-center {
+  text-align: center;
+}
