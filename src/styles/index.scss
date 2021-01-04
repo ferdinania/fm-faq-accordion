@@ -33,3 +33,16 @@ h1 {
 .text-center {
   text-align: center;
 }
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1440px 
+*/
+@media (min-width: 1440px) {
+  body {
+    justify-content: center;
+  }
+  h1 {
+    font-size: 3.3rem;
+  }
+}
