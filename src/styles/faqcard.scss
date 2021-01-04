@@ -1,0 +1,39 @@
+@import '../styles/shared';
+
+.FaqCard {
+
+  .BoxImage {
+    position: relative;
+
+    .BoxImage-Inner {
+      position: absolute;
+      top: -250px;
+      left: 20px;
+      .BoxImage-Inner-Shadow {
+        position: relative;
+        top: -88px;
+        left: 28px;
+      }
+    }
+  }
+  
+  .FaqCard-Header {
+    margin-bottom: 1.8rem;
+  }
+
+  background-color: $white;
+  border-radius: 1.4rem;
+  padding-top: 12rem;
+  padding-bottom: 3rem;
+
+  ul {
+    list-style-type: none;
+    margin: 0 1.8rem;
+  }
+
+  box-shadow: 0px 20px 81px 1px rgba(0,0,0,0.33);
+}
+
+.active {
+  font-weight: $font-weight-bold;
+}
